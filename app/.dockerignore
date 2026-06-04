@@ -1,0 +1,12 @@
+# Git
+.git/
+.gitignore
+
+# Go
+*.exe
+*.test
+*.out
+
+# Misc
+.DS_Store
+.vscode/
