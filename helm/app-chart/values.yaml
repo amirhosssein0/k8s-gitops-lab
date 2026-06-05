@@ -4,7 +4,7 @@ namespace: develop
 
 image:
   repository: asdfghjkl0/k8s-gitops-lab
-  tag: "1.0.0"
+  tag: "1.0.1"
 
 imagePullSecrets:
   - name: dockerhub
