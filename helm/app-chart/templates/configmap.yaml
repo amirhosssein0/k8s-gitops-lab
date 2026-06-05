@@ -3,4 +3,4 @@ kind: ConfigMap
 metadata:
   name: "{{ .Release.Name }}-configmap"
 data:
-  APP_ENV: {{ .Values.configMap.value | quote }}
+  APP_ENV: {{ .Values.configMap.appEnv | quote }}

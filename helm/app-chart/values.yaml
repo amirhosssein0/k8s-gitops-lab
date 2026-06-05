@@ -8,5 +8,9 @@ imagePullSecrets:
   - name: dockerhub
 
 configMap:
-  value: develop
+  appEnv: develop
+
+service:
+  port: 8080
+  type: ClusterIP
 
