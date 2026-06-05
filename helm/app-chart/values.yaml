@@ -1,0 +1,12 @@
+replicaCount: 1
+
+image:
+  repository: asdfghjkl0/k8s-gitops-lab
+  tag: "1.0.0"
+
+imagePullSecrets:
+  - name: dockerhub
+
+configMap:
+  value: develop
+
