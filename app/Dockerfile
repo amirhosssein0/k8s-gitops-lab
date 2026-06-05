@@ -8,5 +8,7 @@ RUN go build -o server .
 FROM alpine:3.19
 WORKDIR /app
 COPY --from=builder /app/server .
+RUN addgroup -S appgroup && adduser -S appuser -G appgroup
+USER appuser
 EXPOSE 8080
 CMD ["./server"]
