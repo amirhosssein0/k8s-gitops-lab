@@ -18,9 +18,8 @@ service:
 
 ingress:
   enabled: true
-  className: "nginx"
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
+  className: "traefik"
+  annotations: {}
   hosts:
     - host: dev.app-chart.local
       paths:
