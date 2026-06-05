@@ -1,5 +1,7 @@
 replicaCount: 1
 
+namespace: develop
+
 image:
   repository: asdfghjkl0/k8s-gitops-lab
   tag: "1.0.0"
