@@ -44,3 +44,16 @@ autoscaling:
   targetCPUUtilizationPercentage: 60
   targetMemoryUtilizationPercentage: 60
 
+podSecurityContext:
+  runAsNonRoot: true
+  runAsUser: 1000
+  fsGroup: 2000
+
+securityContext:
+  allowPrivilegeEscalation: false
+  readOnlyRootFilesystem: true
+  runAsNonRoot: true
+  runAsUser: 1000
+  capabilities:
+    drop:
+      - ALL
