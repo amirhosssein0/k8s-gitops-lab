@@ -2,7 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: {{ .Release.Name }}
-  namespace: {{ .Values.namespace }}
   labels:
     {{- include "app-chart.labels" . | nindent 4 }}
 spec:
@@ -15,7 +14,7 @@ spec:
   template:
     metadata:
       labels:
-        {{- include "app-chart.labels" . | nindent 4 }}
+        {{- include "app-chart.labels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
