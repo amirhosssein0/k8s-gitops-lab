@@ -3,6 +3,8 @@ kind: Deployment
 metadata:
   name: {{ .Release.Name }}
   namespace: {{ .Values.namespace }}
+  labels:
+    {{- include "app-chart.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
@@ -13,7 +15,7 @@ spec:
   template:
     metadata:
       labels:
-        app: {{ .Release.Name }}
+        {{- include "app-chart.labels" . | nindent 4 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:
