@@ -2,7 +2,7 @@ replicaCount: 4
 
 image:
   repository: asdfghjkl0/k8s-gitops-lab
-  tag: "1.0.1"
+  tag: "1.0.2"
 
 imagePullSecrets:
   - name: dockerhub
@@ -37,7 +37,7 @@ resources:
     memory: 128Mi
 
 autoscaling:
-  enabled: false
+  enabled: true
   minReplicas: 1
   maxReplicas: 5
   targetCPUUtilizationPercentage: 60

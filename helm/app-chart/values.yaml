@@ -2,7 +2,7 @@ replicaCount: 1
 
 image:
   repository: asdfghjkl0/k8s-gitops-lab
-  tag: "1.0.1"
+  tag: "1.0.2"
 
 imagePullSecrets:
   - name: dockerhub

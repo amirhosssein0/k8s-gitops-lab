@@ -7,7 +7,7 @@ import (
     "github.com/gin-gonic/gin"
 )
 
-var version = "1.0.1"
+var version = "1.0.2"
 
 func main() {
     r := gin.Default()
