@@ -1,0 +1,30 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: app-environments
+spec:
+  generators:
+  - list:
+      elements:
+      - env: dev
+        namespace: develop
+      - env: staging
+        namespace: staging
+  template:
+    metadata:
+      name: 'app-{{env}}'
+    spec:
+      source:
+        path: helm/app-chart
+        helm:
+          valueFiles:
+          - ../../gitops/{{env}}/values.yaml
+      destination:
+        server: https://kubernetes.default.svc
+        namespace: '{{namespace}}'
+      syncPolicy:
+        automated:
+          prune: true
+          selfHeal: true
+        syncOptions:
+          - CreateNamespace=true
