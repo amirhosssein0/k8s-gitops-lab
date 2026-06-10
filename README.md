@@ -215,5 +215,5 @@ No manual `helm upgrade` needed — git is the single source of truth.
 ---
 
 <div align="center">
-<sub>Built as part of a DevOps portfolio — next up: <a href="#">vault-cicd-lab</a></sub>
+<sub>Built as part of a DevOps portfolio — next up: <a href="https://github.com/amirhosssein0/vault-cicd-lab">vault-cicd-lab</a></sub>
 </div>
